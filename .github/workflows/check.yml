@@ -41,3 +41,16 @@ jobs:
               run: pnpm install
             - name: Check
               run: pnpm run lint
+    notify:
+        name: Post Workflow Status To Slack
+        needs:
+          - check
+        runs-on: ubuntu-latest
+        steps:
+          - name: Slack Workflow Notification
+            uses: Gamesight/slack-workflow-status@master
+            with:
+              slack_webhook_url: https://hooks.slack.com/services/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 
+              name: "Github action Bot"
+              icon_emoji: ":zap:"
+              icon_url: "https://avatars.githubusercontent.com/u/9778924?v=4"
