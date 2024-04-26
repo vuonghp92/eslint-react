@@ -53,5 +53,6 @@ jobs:
               repo_token: ${{secrets.TOKEN_NOTIFY}}
               slack_webhook_url: https://hooks.slack.com/services/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 
               name: "Github action Bot"
+              channel: "#test"
               icon_emoji: ":zap:"
               icon_url: "https://avatars.githubusercontent.com/u/9778924?v=4"
